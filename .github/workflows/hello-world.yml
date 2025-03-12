@@ -12,5 +12,7 @@ jobs:
     - name: Print a Secret
       env:
         API_KEY: ${{ secrets.API_KEY }}
+        Repository: $ {{ github.repository }}
       run: |
         echo "The API key is: $API_KEY"
+        echo "Repo is: $Repository"
